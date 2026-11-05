@@ -174,6 +174,15 @@ void Comparison_Menu(string const &dataSize, SortOptions const &sOptions,
 
 //Yuxi
 
+// Generate student records
+vector<Student> generateStudents(int count = 100000);
 
+// Quick Sort
+void quickSort(vector<Student>& students, int low, int high,
+               string field, bool ascending, long long& comparisons);
+
+// Check Quick Sort result
+bool isQuickSortCorrect(const vector<Student>& students,
+                        string field, bool ascending);
 
 #endif //STUDENTRECORDMANAGEMENT_STUDENT_H
