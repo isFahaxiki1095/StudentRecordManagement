@@ -30,15 +30,15 @@ struct StudentLists {
 
 //Stores Data from Merge sort of Student dataset
 struct MergeData {
-    int runtime = 0;
-    int comparisons = 0;
+    double runtime = 0;
+    long long comparisons = 0;
     bool correct = false;
 };
 
 //Stores Data from Quick sort of Student dataset
 struct QuickData {
-    int runtime = 0;
-    int comparisons = 0;
+    double runtime = 0;
+    long long comparisons = 0;
     bool correct = false;
 };
 
@@ -169,7 +169,11 @@ void Comparison_Menu(string const &dataSize, SortOptions const &sOptions,
 
 
 //Jie Feng - Functions
+bool compareStudents(const Student& a, const Student& b, string field, bool ascending);
 
+void mergeSort(vector<Student>& students, int left, int right, string field, bool ascending, long long& comparisons);
+
+bool isSortedCorrectly(const vector<Student>& students, string field, bool ascending);
 
 
 //Yuxi
